@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Own Todo List</title>
+    <script src="https://kit.fontawesome.com/32b5a906d8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="todo-list">
+        <header>
+            <h1><i class="fa-solid fa-list-check"></i>Own Todo List</h1>
+            <p>Twoja lista zadań i wydarzeń</p>
+        </header>
+        <div class="daily-list">
+            <form class="add-todo">
+                <h2>Dodaj zadanie</h2>
+                <p class="alert-info"></p>
+                <input type="text" class="todo-input" placeholder="Wpisz treść zadania...">
+                <div class="check-category">
+                    <label for="category">Kategoria</label>
+                    <button type="button" class="category-btn" id="category">
+                        <span class="select-label">wybierz kategorię</span>
+                        <div class="arrow"></div>
+                    </button>
+                    <div class="dropdown">
+                        <label class="select-item" for="house-chores">Obowiązki domowe</label>
+                        <input class="option" name="type" id="house-chores" type="radio" value="house-chores">
+                        <label class="select-item" for="study-list">rzeczy do nauki</label>
+                        <input class="option" name="type" id="study-list" type="radio" value="study-list">
+                    </div>
+                </div>
+                <button class="add-btn">Dodaj</button>
+            </form>
+            <div class="todo-list">
+                <h2>Codzienna Lista Zadań</h2>
+                <div class="cards">
+                    <section class="house-chores">
+                        <h3><i class="fa-solid fa-house-circle-check"></i>Obowiązki domowe</h3>
+                        <p class="alert-info"></p>
+                        <ul class="house-chores-ul">
+                        </ul>
+                    </section>
+                    <section class="study-list">
+                        <h3><i class="fa-solid fa-clipboard-list"></i>Lista rzeczy do nauki</h3>
+                        <p class="alert-info"></p>
+                        <ul class="study-list-ul">
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="popup-background"></div>
+        <div class="popup">
+            <h3>Edytuj zadanie:</h3>
+            <div class="popup-body">
+                <p class="popup-info"></p>
+                <input type="text" class="popup-input" placeholder="Wprowadź nową treść zadania...">
+                <button class="popup-btn accept">Zatwierdź</button>
+                <button class="popup-btn cancel">Anuluj</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
